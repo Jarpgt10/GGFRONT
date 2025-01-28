@@ -1,10 +1,11 @@
 import React from 'react'
 import SectionToggle from './SectionToggle'
-import { Form, Switch } from 'antd'
+import { Form, InputNumber, Switch } from 'antd'
 
 export default function DeliverySection() {
     return (
-        <>
+        <div className="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-4 gap-6">
+
             <Form.Item label='Envio' name='delivery'>
                 <Switch
                     checkedChildren='SI'
@@ -12,6 +13,18 @@ export default function DeliverySection() {
                     disabled={false}
                 />
             </Form.Item>
-        </>
+
+            <Form.Item label='Total' name='total'>
+                <InputNumber />
+            </Form.Item>
+
+            <Form.Item label='Abono' name='Abono'>
+                <InputNumber />
+            </Form.Item>
+
+            <Form.Item label='Saldo' name='saldo'>
+                <InputNumber />
+            </Form.Item>
+        </div>
     )
 }
